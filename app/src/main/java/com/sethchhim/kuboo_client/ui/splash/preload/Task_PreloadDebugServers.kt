@@ -11,12 +11,12 @@ class Task_PreloadDebugServers(splashActivity: SplashActivity) : Task_PreloadBas
         if (BuildConfig.DEBUG) {
             if (viewModel.isLoginListEmpty()) {
                 viewModel.addLogin(Login(nickname = "Books Server",
-                        server = "http://192.168.1.100:2202/opds-books/",
+                        server = "192.168.1.8:3456/opds/v1.2/catalog",
                         username = "asdf",
                         password = "asdf"))
 
                 viewModel.addLogin(Login(nickname = "Comics Server",
-                        server = "http://192.168.1.100:2202/opds-comics/",
+                        server = "192.168.1.8:3456/opds/v1.2/catalog",
                         username = "asdf",
                         password = "asdf"))
             }
